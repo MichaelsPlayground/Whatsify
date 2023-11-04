@@ -21,3 +21,9 @@
     <p>
       Thank you for taking the time to read my README. I hope you find my work to be useful and informative. If you have any questions or comments, please feel free to reach out to me. I am always happy to connect with other developers and share my knowledge and experience.
     </p>
+
+# Source:
+
+Source on GitHub: https://github.com/KhubaibKhan4/Whatsify-Android
+
+Source upgraded to Gradle 8.12 and dependencies as well
