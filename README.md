@@ -27,3 +27,5 @@
 Source on GitHub: https://github.com/KhubaibKhan4/Whatsify-Android
 
 Source upgraded to Gradle 8.12 and dependencies as well
+
+Isn't running very well, sorry

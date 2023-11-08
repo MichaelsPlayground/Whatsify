@@ -40,6 +40,7 @@ public class ChatFragment extends Fragment {
     List<Chat> usersArrayList = new ArrayList<>();
     FirebaseDatabase database;
     DatabaseReference myRef;
+    ChatAdapter chatAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,26 +55,27 @@ public class ChatFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-//        database.getReference("Users").addValueEventListener(new ValueEventListener() {
-//            @SuppressLint("NotifyDataSetChanged")
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                usersArrayList.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    if (dataSnapshot.getValue() instanceof Chat) {
-//                        Chat chat = dataSnapshot.getValue(Chat.class);
-//                        usersArrayList.add(chat);
-//                    }
-//                }
-//                chatAdapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
+        /*
+        database.getReference("Users").addValueEventListener(new ValueEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                usersArrayList.clear();
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    if (dataSnapshot.getValue() instanceof Chat) {
+                        Chat chat = dataSnapshot.getValue(Chat.class);
+                        usersArrayList.add(chat);
+                    }
+                }
+                chatAdapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+*/
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
